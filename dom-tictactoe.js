@@ -59,6 +59,11 @@ const checkForWin = () => {
   if(horizontalWin() || verticalWin() || diagonalWin()) {
     // **BONUS** you could make the dismissal of this alert window reset the board...
     window.alert(`Player ${currentMarker} won!`)
+    board = [
+      ['','',''],
+      ['','',''],
+      ['','','']
+    ];
   } else {
     // if no win, change the marker from X to O, or O to X for the next player.
     console.log(`No one won`);
@@ -104,6 +109,13 @@ const resetBoard = () => {
     console.log(squares[i])
     squares[i].innerHTML = null
   }
+
+  board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+  ];
+ 
 }
 
   // @TODO, Your code here: make sure to reset the array of arrays to empty for a new game
@@ -114,3 +126,4 @@ const resetBoard = () => {
 // 3. Reset the number of wins
 // 4. Clear the board on alert window dismissal
 // 5. Add players names and display who wins, i.e. "Congrats Emily, you won with 0s
+
